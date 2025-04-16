@@ -62,10 +62,14 @@ function drawCards(arr) {
 async function init() {
     console.log('script start')
     const chartApi = "https://datausa.io/api/data?drilldowns=Nation&measures=Population";
-    const chart = await getApi(chartApi);
-    console.log(chart.data)
     const dataApi = "https://datausa.io/api/searchLegacy/?limit=10&dimension=University&hierarchy=University&q=";
-    const data = await getApi(dataApi)
+    const APIS = [chartApi, dataApi]
+    const promises = APIS.map(api => getApi(api))
+    const result = await Promise.all(promises)
+    console.log(result)
+    const chart = result[0];
+    console.log(chart.data)
+    const data = result[1];
     console.log(data.results)
     drawChart(chart.data)
     drawCards(data.results)
