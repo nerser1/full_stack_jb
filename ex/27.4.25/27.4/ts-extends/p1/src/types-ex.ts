@@ -1,0 +1,17 @@
+type Product = {
+    id:number,
+    name:string,
+    price:number,
+    inStock:boolean
+}
+
+function printProduct(product: Product): void {
+    console.log(
+      `Product: ${product.name} costs $${product.price} and is ${
+        product.inStock ? "available" : "out of stock"
+      }.`
+    );
+  }
+
+const product: Product = {id:342, name:"nerya", price: 399, inStock: true}
+printProduct(product)
