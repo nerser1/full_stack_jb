@@ -1,0 +1,110 @@
+body{
+    background-color: black;
+}
+
+.card {
+    width: 100px;
+    display: inline;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+.normal {
+    background-color: rgb(139, 201, 255);
+}
+
+.fighting {
+    background-color: rgb(136, 77, 0);
+}
+
+.flying {
+    background-color: rgb(178, 219, 255);
+}
+
+.poison {
+    background-color: rgb(188, 178, 255);
+}
+
+.ground {
+    background-color: rgb(166, 121, 95);
+}
+
+.rock {
+    background-color: rgb(118, 118, 118);
+}
+
+.bug {
+    background-color: rgb(185, 255, 197);
+}
+
+.ghost {
+    background-color: rgb(124, 135, 162);
+}
+
+.steel {
+    background-color: rgb(170, 170, 170);
+}
+
+.fire {
+    background-color: rgb(253, 115, 115);
+}
+
+.water {
+    background-color: rgb(115, 198, 253);
+}
+
+.grass {
+    background-color: rgb(97, 194, 144);
+}
+
+.electric {
+    background-color: rgb(250, 254, 132);
+}
+
+.psychic{
+    background-color: rgb(214, 255, 154);
+}
+
+.dark{
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+.ice{
+    background-color: rgb(255, 255, 255);
+
+}
+
+.dragon{
+    background-color: rgb(209, 209, 209);
+}
+
+.fairy{
+    background-color: rgb(255, 195, 195);
+}
+
+.tableType {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(132, 132, 132);
+}
+
+p {
+    text-align: center;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    word-wrap: break-word;
+}
