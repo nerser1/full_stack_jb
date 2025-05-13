@@ -1,5 +1,6 @@
 const DOM = {
-    pokeList: document.getElementById('pokeList')
+    pokeList: document.getElementById('pokeList'),
+    response: document.getElementById('response')
 }
 
 async function getData(url){
@@ -13,9 +14,25 @@ function getListDom(arr){
         const element = arr[index];
         const li = document.createElement('li')
         li.innerText = element.name;
-        li.onclick(getData(element.url))
+        li.addEventListener('click', async function(){
+            console.log('clicked')
+            this.style.color = 'blue'
+            const data = await fetch(element.url)
+            const result = await data.json() 
+            console.log(result.flavor_text_entries)   
+            const texts = document.createElement('ul')
+            result.flavor_text_entries.forEach(element => {
+                const li = document.createElement('li')
+                li.innerText = element.flavor_text
+                texts.append(li)
+                console.log(texts)
+            });    
+            DOM.response.innerHTML = ''
+            DOM.response.append(texts)
+        })
         ol.append(li)
-        
+        console.log(ol)
+
     }
     DOM.pokeList.append(ol)
 }
