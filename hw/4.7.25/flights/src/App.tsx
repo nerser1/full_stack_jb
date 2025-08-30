@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import {Flights} from '../components/Pages/Flights/Flights'
+import {Menu} from '../components/Menu/Menu'
+import {Routing} from '../components/Routing/Routing'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-    <Flights />
-    </>
+    <div>
+      <aside>
+        <Menu />
+      </aside>
+      <main>    
+        <Routing />
+      </main>
+    </div>
   )
 }
 
